@@ -5,9 +5,11 @@
  */
 package pacote;
 
+import java.awt.Color;
+
 /**
  *
- * @author micha
+ * @author Michael Coitim
  */
 public class TelaParImpar extends javax.swing.JFrame {
 
@@ -43,6 +45,11 @@ public class TelaParImpar extends javax.swing.JFrame {
         txtValor.setText(" ");
 
         btnVerifica.setText("Verificar");
+        btnVerifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,19 +57,17 @@ public class TelaParImpar extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnVerifica)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(lblResultado)))))
-                .addContainerGap(149, Short.MAX_VALUE))
+                            .addComponent(lblResultado))))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,6 +85,16 @@ public class TelaParImpar extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVerificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificaActionPerformed
+        float valor = Float.parseFloat(txtValor.getText());
+        lblResultado.setForeground(Color.blue);
+        if(valor % 2 ==0 ){
+            lblResultado.setText("Par");
+        }else{
+            lblResultado.setText("Impar");
+        }
+    }//GEN-LAST:event_btnVerificaActionPerformed
 
     /**
      * @param args the command line arguments
