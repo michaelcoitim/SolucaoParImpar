@@ -67,7 +67,7 @@ public class TelaParImpar extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnVerifica)
                             .addComponent(lblResultado))))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +80,7 @@ public class TelaParImpar extends javax.swing.JFrame {
                 .addComponent(btnVerifica)
                 .addGap(18, 18, 18)
                 .addComponent(lblResultado)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
